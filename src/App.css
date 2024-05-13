@@ -1,0 +1,113 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 2rem;
+  text-align: center;
+  --black: rgb(76, 74, 74);
+  --white: rgba(242, 233, 233, 0.99);
+  --nude:#2d50c4;
+  --bg-card: rgb(80, 76, 69);
+}
+.container{
+  width: 100%;
+  nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    h1{
+      color: black;
+    }
+    button{
+      font-size: 0.8rem;
+      background-color: var(--bg-card);
+      border: none;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      color: var(--white);
+      width: 12rem;
+      height: auto;
+      transition: width 0.3s, height 0.5s;
+      font-weight: 600;
+    }
+    button::before{
+      content: '+';
+      font-size: xx-large;
+      padding: 0.5rem;
+      color: var(--white);
+      vertical-align: middle;
+    }
+      button:hover{
+      background-color:var(--bg-card);
+      width: 13rem;
+      height: auto;
+    }
+   
+  }
+  
+}
+.form-container{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+.card-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 3rem;
+}
+
+@media only screen and (max-width: 750px){
+  #root{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    
+  }
+  .container{
+    width: 100%;
+    nav{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      h1{
+        font-size: small;
+        margin-left: 2rem;
+      }
+      button{
+        font-size: 0.8rem;
+        background-color: var(--bg-card);
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        color: var(--white);
+        width: 12rem;
+        height: auto;
+        transition: width 0.3s, height 0.5s;
+        font-weight: 600;
+      }
+      button::before{
+        content: '+';
+        font-size: xx-large;
+        padding: 0.5rem;
+        color: var(--white);
+        vertical-align: middle;
+      }
+        button:hover{
+        background-color:var(--bg-card);
+        width: 13rem;
+        height: auto;
+      }
+      h1{
+        color: var(--black);
+      }
+    }
+    
+  }
+  .card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    margin-top: 2rem;
+  }
+}
